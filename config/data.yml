@@ -1,0 +1,90 @@
+TEST:
+  emails:
+    happypath_user: dionysia.bbc+test@gmail.com
+    alternative_happy_user: dionysia.bbc@gmail.com
+#    dionysia.testing@gmail.com
+    multiple_storedcards:
+    no_expired_cards:
+    one_default_expired_card:
+    multiple_cards_default_expired:
+    multiple_cards_non_default_expired:
+    change_first_name:
+    email_address_invalid:
+    email_with_no_at:
+    dummy_email: dionysia.testing@gmail.com
+
+  name:
+    happypath_user: dionysia
+#    tester
+    multiple_storedcards:
+    no_expired_cards:
+    one_default_expired_card:
+    multiple_cards_default_expired:
+    multiple_cards_non_default_expired:
+
+  passwords:
+    valid_password: Denise89
+#    Tester123
+    invalid_password: tester
+    five_digit_password:
+    not_matching_password: 
+    change_password: 
+
+  payment:
+    visa: 4111111111111111
+    cvv: 123
+    mastercard: 5555555555554444
+    visadebit: 4012000033330125
+    jcb: 6011111111111117
+    expiry_month: 12
+    expiry_year: 2023
+    name_on_card: jamie jones
+    address_lineone: my address line one
+    address_linetwo: my address line two
+    town_or_city: My town
+    postcode: WC18AQ
+    cvv_does_not_match: 200
+
+LIVE:
+  emails:
+    happypath_user: dionysia.bbc+test@gmail.com
+#    dionysia.testing@gmail.com
+    alternative_happy_user: dionysia.bbc@gmail.com
+    multiple_storedcards:
+    no_expired_cards:
+    one_default_expired_card:
+    multiple_cards_default_expired:
+    multiple_cards_non_default_expired:
+    change_first_name:
+    email_address_invalid:
+    email_with_no_at:
+    dummy_email: dionysia.testing@gmail.com
+
+  name:
+    happypath_user: dionysia
+#    tester
+    user_with_devices:
+    multiple_storedcards:
+
+  passwords:
+    valid_password: Denise89
+#    Tester123
+    invalid_password: tester
+    five_digit_password:
+    not_matching_password: tester
+    change_password:
+
+  payment:
+    visa:
+    cvv:
+    mastercard:
+    visadebit:
+    jcb:
+    expiry_month: 12
+    expiry_year: 2023
+    name_on_card: jamie jones
+    address_lineone: my address line one
+    address_linetwo: my address line two
+    town_or_city: My town
+    postcode: WC18AQ
+    cvv_does_not_match: 200

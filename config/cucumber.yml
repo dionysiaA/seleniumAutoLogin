@@ -1,0 +1,39 @@
+#####  Environments  #####
+sandbox :  SERVER=sandbox
+int     :  SERVER=int
+test    :  SERVER=test
+stage   :  SERVER=stage
+live    :  SERVER=live
+
+#####  Drivers  #####
+selenium     : DRIVER=selenium
+phantom      : DRIVER=poltergeist
+
+#####  Used tags  #####
+headless          :  --tags @headless
+routes            :  --tags @routes
+smoke             :  --tags @smoke
+js                :  --tags @js
+
+#####  Ignore tags  #####
+ignore-manual     : --tags ~@manual
+ignore-wip        : --tags ~@wip --tags ~@debug
+ignore-todo       : --tags ~@todo
+ignore-smoke      : --tags ~@smoke
+ignore-headless   : --tags ~@headless
+ignore-routes     : --tags ~@routes
+ignore-default    : --tags ~@manual --tags ~@todo --tags ~@wip --tags ~@debug --tags ~@istats
+ignore-default-for-headless : --tags ~@manual --tags ~@todo --tags ~@wip --tags ~@debug
+
+#####  test results  ######
+html-report             : --format html --out test_results.html --format pretty --format rerun --out failed.txt
+rerun-html-report       : --format html --out test_rerun_results.html --format pretty --format rerun --out failed2.txt
+second-rerun-html-report: --format html --out test_rerun_results2.html --format pretty
+
+###### Browser Stack Parameters ######
+bs_params: BS_OS='Windows' BS_OS_VERSION='7' BS_BROWSER='Firefox' BS_BROWSER_VERSION='46' RESOLUTION='1024x768'
+
+##### profiles  ######
+smoke-test              : -p bs_params -p browser_stack -p smoke -p ignore-default -p html-report
+routes-tests            : -p phantom -p routes -p html-report -p test
+
